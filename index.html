@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>School of Computer Science & Engineering</h1>
+
+    <form action="/submit_form" method="post" class="form" onsubmit="event.preventDefault(); displayData();">
+        <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" id="id" name="id" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <div class="radio-group">
+                <input type="radio" id="male" name="gender" value="male"> Male
+                <input type="radio" id="female" name="gender" value="female"> Female
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="fieldOfStudy">Field of study</label>
+            <select id="fieldOfStudy" name="fieldOfStudy" class="form-control">
+                <option value="CS">Computer Science (CS)</option>
+                <option value="CE">Computer Engineering (CE)</option>
+                <option value="NE">Network Engineering (NE)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="subjects">List of subjects</label>
+            <div class="checkbox-group">
+                <input type='checkbox' id='subject1' name='subjects' value='Principle of EE 1'> Principle of EE 1
+                <input type='checkbox' id='subject2' name='subjects' value='Computer Network'> Computer Network
+                <input type='checkbox' id='subject3' name='subjects' value='Web Application Development'> Web Application Development
+                <input type='checkbox' id='subject4' name='subjects' value='Object Oriented Programming'> Object Oriented Programming
+                <input type='checkbox' id='subject5' name='subjects' value='Computer Graphics'> Computer Graphics
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="5" cols="60" class="form-control"></textarea>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn">Submit</button>
+            <button type="button" onclick="cancel()" class="btn btn-secondary">Cancel</button>
+        </div>
+    </form>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
